@@ -7,16 +7,38 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.glyphicons.css" type="text/css" media="screen" charset="utf-8">
+    
     <style>
-      body {
-	padding-top: 60px; /* 60px to make the container go all the way
+    body {
+      padding-top: 60px; /* 60px to make the container go all the way
       to the bottom of the topbar */
-	background-image: url(assets/img/background_photo_1400px_1.jpg);
-	background-repeat: repeat;
-}
+      background-image: url(assets/img/background_photo_1400px_1.jpg);
+      background-repeat: repeat;
+    }
+    
+    body,td,th {
+      color: #FFFFFF;
+    }
+    a:link {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    a:visited {
+      text-decoration: none;
+      color: #CCCCCC;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #FF0000;
+    }
+    a:active {
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+    
     </style>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
@@ -28,39 +50,18 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-    <style>
-    body,td,th {
-	color: #FFFFFF;
-}
-a:link {
-	color: #FFFFFF;
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-	color: #CCCCCC;
-}
-a:hover {
-	text-decoration: underline;
-	color: #FF0000;
-}
-a:active {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-    </style>
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
    	  <div class="navbar-inner">
-    		<div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    		<div class="container"><button type="button" class="btn btn-default navbar-btn btn-default" data-toggle="collapse" data-target=".navbar-collapse">
     				<span class="icon-bar"></span>
     				<span class="icon-bar"></span>
     				<span class="icon-bar"></span>
     			</button>
     			
-    			<a class="brand" href="#"><img src="assets/img/progress-200px.png" width="120"></a>
-    			<div class="nav-collapse collapse">
+    			<a class="navbar-brand" href="#"><img src="assets/img/progress-200px.png" width="120"></a>
+    			<div class="navbar-collapse collapse">
     				<ul class="nav">
     					<li class="active">
     						<a href="#apparel">APPAREL</a>
@@ -73,96 +74,118 @@ a:active {
     					</li>
     				</ul>
     				<form class="navbar-form pull-right">
-    					<input class="span2" type="text" placeholder="Email">
-    					<input class="span2" type="password" placeholder="Password">
-    					<button type="submit" class="btn">
+    					<input class="col-md-2" type="text" placeholder="Email">
+    					<input class="col-md-2" type="password" placeholder="Password">
+    					<button type="submit" class="btn btn-default">
     						Sign in
     					</button>
     				</form>
    			  </div>
-    			<!--/.nav-collapse -->
+    			<!--/.navbar-collapse -->
     		</div>
     	</div>
     </div>
     <div class="container">
       <h1>APPAREL QUOTE CALCULATOR</h1>
-   	  <div class="well"><iframe align="middle" frameborder="0" scrolling="no" height="580px" width="930px" seamless src="http://progressofdesign.com/tools/garments.1.php"></iframe>
+   	  <div class="well">
+   	    
+   	    <section class="container">
+            <div class="row">
+              <div class="col-md-6" data-calculator-togglable>
+                <div class="row">
+                  <div class="col-md-4 col-xs-2">item</div>
+                  <div class="col-md-4 col-xs-2">item</div>
+                  <div class="col-md-4 col-xs-2">item</div>
+                  <div class="col-md-4 col-xs-2">item</div>
+                  <div class="col-md-4 col-xs-2">item</div>
+                  <div class="col-md-4 col-xs-2">item</div>
+                  <div class="col-md-4 col-xs-2">item</div>
+                </div>
+              </div>
+              <div class="col-md-6" data-calculator-togglable>
+                <div class="row">
+                  <div class="col-md-11 col-md-offset-1">put the form here</div>
+                </div>
+              </div>
+            </div>
+         </section>
+   	    
    	  </div>
       <h1>DOWNLOADABLE SHIRT TEMPLATES</h1>
     	<div class="well">
-    	  <div class="row-fluid">
-    	    <div class="span4">
+    	  <div class="row">
+    	    <div class="col-md-4">
     	      <h3><img src="assets/img/shirt-templates/thumbs/thumb_tshirt.png"></h3>
 		<p class="TITLES">
 			T-SHIRT</p>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_pocket-tshirt.png"></h3>
 		<p class="TITLES">
 			POCKET TEE</p>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_tshirt-heather.png"></h3>
 		<p class="TITLES">
 			HEATHER TEE</p>
 	</div>
 </div>
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_vneck-tshirt.png"></h3>
 		<p class="TITLES">
 			V-NECK TEE</p>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_vneck-deep-tshirt.png"></h3>
 		<p class="TITLES">
 			DEEP-V TEE</p>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_polo.png"></h3>
 		<p class="TITLES">
 			POLO</p>
 	</div>
 </div>
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_tank.png"></h3>
 		<p class="TITLES">
 			TANK</p>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_tshirt-longsleeve.png"></h3>
 		<p class="TITLES">
 			LONG SLEEVE</p>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_pocket-tshirt-longsleeve.png"></h3>
 		<p class="TITLES">
 			POCKET LONG SLEEVE</p>
 	</div>
 </div>
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_sleeves-shortsleeve.png"></h3>
 		<p class="TITLES">SHORT SLEEVES</p>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_sleeves-longsleeve.png"></h3>
 		<p class="TITLES">LONG SLEEVES</p>
 	</div>
-    <div class="span4">
+    <div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_sleeves-hoodie.png"></h3>
 		<p class="TITLES">
 			HOODIE SLEEVES</p>
 	</div>
 </div>
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_hoodie-zip.png"></h3>
 		<p class="TITLES">
 			ZIP HOODIE</p>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<h3><img src="assets/img/shirt-templates/thumbs/thumb_hoodie-pullover.png"></h3>
 		<p class="TITLES">PULLOVER HOODIE</p>
 </div>
