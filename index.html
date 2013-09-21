@@ -14,28 +14,31 @@
     body {
       padding-top: 60px; /* 60px to make the container go all the way
       to the bottom of the topbar */
-      background-image: url(assets/img/background_photo_1400px_1.jpg);
-      background-repeat: repeat;
+      background: url(assets/img/background_photo_1400px_1.jpg) fixed;
     }
     
-    body,td,th {
+   .white {
       color: #FFFFFF;
     }
-    a:link {
+    footer a:link {
       color: #FFFFFF;
       text-decoration: none;
     }
-    a:visited {
+    footer a:visited {
       text-decoration: none;
       color: #CCCCCC;
     }
-    a:hover {
+    footer a:hover {
       text-decoration: underline;
       color: #FF0000;
     }
-    a:active {
+    footer a:active {
       text-decoration: none;
       color: #FFFFFF;
+    }
+    
+    figure {
+      cursor:pointer;
     }
     
     .navbar-inverse {
@@ -62,7 +65,13 @@
     <header class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img src="assets/img/progress-200px.png" width="120"></a>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="assets/img/progress-200px.png" width="120"></a>
           </div>
           <nav class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
@@ -76,15 +85,14 @@
                 <a href="#">CONTACT</a>
               </li>
             </ul>
-            <form class="navbar-form navbar-right" role="search">
+            <form action="http://opms.progressofdesign.com/login.php" method="post" class="navbar-form navbar-right" accept-charset="utf-8">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="E-Mail">
+                    <input type="text" class="form-control" name="Username" placeholder="E-Mail">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password">                    
+                    <input type="password" class="form-control" name="Password" placeholder="Password">                    
                   </div>
-
-                  <button type="submit" class="btn btn-default">Submit</button>
+                  <button type="submit" name="Submit" value="Login" class="btn btn-default">Submit</button>
             </form>
           </nav>
       </div>    
@@ -92,32 +100,115 @@
 
     
     <div class="container">
-      <h1>APPAREL QUOTE CALCULATOR</h1>
-   	  <div class="well">
-   	    
-   	    <section class="container">
-            <div class="row">
-              <div class="col-md-6" data-calculator-togglable>
-                <div class="row">
-                  <div class="col-md-4 col-xs-2">item</div>
-                  <div class="col-md-4 col-xs-2">item</div>
-                  <div class="col-md-4 col-xs-2">item</div>
-                  <div class="col-md-4 col-xs-2">item</div>
-                  <div class="col-md-4 col-xs-2">item</div>
-                  <div class="col-md-4 col-xs-2">item</div>
-                  <div class="col-md-4 col-xs-2">item</div>
+      <h1 class="white">APPAREL QUOTE CALCULATOR</h1>
+   	  <div class="well">          
+        <form class="row" action="#" method="post" accept-charset="utf-8">
+
+          <div class="col-md-6">
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      1. Select Garment
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="row">
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
+                        <figcaption><input type="radio" name="garment" checked>T-Shirts</figcaption>
+                      </figure>
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
+                        <figcaption><input type="radio" name="garment">Pocket Tees</figcaption>
+                      </figure>
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/vneckt.gif" width="133" height="120" alt="Vneckt">
+                        <figcaption><input type="radio" name="garment">V Necks</figcaption>
+                      </figure>
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
+                        <figcaption><input type="radio" name="garment">Long Sleeves</figcaption>
+                      </figure>
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
+                        <figcaption><input type="radio" name="garment">Pocket Long Sleeves</figcaption>
+                      </figure>
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/golf.gif" width="120" height="120" alt="Golf">
+                        <figcaption><input type="radio" name="garment">Polos</figcaption>
+                      </figure>
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/ziphoodie.gif" width="90" height="120" alt="Ziphoodie">
+                        <figcaption><input type="radio" name="garment">Zip Hoodies</figcaption>
+                      </figure>
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/pulloverhoodie.gif" width="90" height="120" alt="Pulloverhoodie">
+                        <figcaption><input type="radio" name="garment">Pullover Hoodies</figcaption>
+                      </figure>
+                      
+                      <figure class="col-md-4 col-xs-2">
+                        <img src="assets/img/calculator-templates/cust-supplied.gif" width="120" height="120" alt="Cust Supplied">
+                        <figcaption><input type="radio" name="garment">Customer Supplied Items</figcaption>
+                      </figure>
+                    
+                      
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6" data-calculator-togglable>
-                <div class="row">
-                  <div class="col-md-11 col-md-offset-1">put the form here</div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                      2. Specify quantity and colors
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    make numbers form here
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                      3. Review price quote
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="alert alert-danger">
+                      You have not specified print details. Please follow steps 1 &amp; 2.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-         </section>
-   	    
+          </div>
+          <div class="col-md-6">
+            <div class="well">
+              <h3>This area builds a mock up of colors on each part of garments</h3>
+            </div>
+          </div>
+        </form>
    	  </div>
-      <h1>DOWNLOADABLE SHIRT TEMPLATES</h1>
+   	  
+      <h1 class="white">DOWNLOADABLE SHIRT TEMPLATES</h1>
     	<div class="well">
     	  <div class="row">
     	    <div class="col-md-4">
@@ -197,7 +288,7 @@
 </div>
     	</div>
 </div>
-    	<footer>
+    	<footer class="white">
     		<p>248-982-4247<br>
     		  <a href="mailto:info@printwithprogress.com">info@printwithprogress.com</a><br>
    		      <a href="https://plus.google.com/100000049123748979614/about" target="new">364 Hilton Road, Ferndale,	Mich	48220</a><br>
