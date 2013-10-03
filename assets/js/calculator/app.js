@@ -55,8 +55,13 @@ jQuery(function ($) {
 			panelOneInputs.on('deactivate', this.deactivateStyle);
 			
 			var quantityInput = this.$quantityInputs;
-			quantityInput.next().on('click','',{prntObject:quantityInput}, this.addColor);
-			quantityInput.prev().on('click','',{prntObject:quantityInput}, this.removeColor);
+			quantityInput.each(function(i,v){
+			  var _s = $(this);
+			  console.log(_s)
+			  _s.next().on('click','',{prntObject:_s}, this.addColor);
+  			_s.prev().on('click','',{prntObject:_s}, this.removeColor);
+			});
+			
 		},
 		render: function () {
       this.$garmentOptions.find('input').iCheck({
@@ -66,10 +71,10 @@ jQuery(function ($) {
         });
 		},
 		removeColor: function(e){
-		  console.log(e.data)
+		  console.log(e)
 		},
 		addColor: function(e){
-		  console.log(e.data)
+		  console.log(e)
 		},
 		activateStyle: function (e) {
 		  var element = e;
