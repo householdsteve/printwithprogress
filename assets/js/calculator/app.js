@@ -44,6 +44,7 @@ jQuery(function ($) {
       // this.todoTemplate = Handlebars.compile($('#todo-template').html());
       // this.footerTemplate = Handlebars.compile($('#footer-template').html());
 			this.$calcInstance = $('#calculator');
+		  this.$builderWell = $('#builder-well');
 			this.$panelOne = this.$calcInstance.find('#collapseOne');
 			this.$panelTwo = this.$calcInstance.find('#collapseTwo');			
 			this.$garmentOptions = $('figure',this.$panelOne);
@@ -72,10 +73,15 @@ jQuery(function ($) {
 		removeColor: function(e){
 		  var el = e.data.prntObject, min = el.attr('min');
 	  		  if(el.val() > min) el.val(parseInt(el.val())-1);
+	  		  
+	  		  // remove items from builder well and update counts on corresponding elements colors.
 		},
 		addColor: function(e){
 		  var el = e.data.prntObject, max = el.attr('max');
 		  if(el.val() < max) el.val(parseInt(el.val())+1);
+		  
+		  // we need to add control to change number on visualized garment
+		  // we need to set a variable to check if this location is present and if not add it to builder well
 		},
 		activateStyle: function (e) {
 		  var element = e;
