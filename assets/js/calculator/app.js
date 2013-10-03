@@ -45,12 +45,18 @@ jQuery(function ($) {
       // this.footerTemplate = Handlebars.compile($('#footer-template').html());
 			this.$calcInstance = $('#calculator');
 			this.$panelOne = this.$calcInstance.find('#collapseOne');
+			this.$panelTwo = this.$calcInstance.find('#collapseTwo');			
 			this.$garmentOptions = $('figure',this.$panelOne);
+			this.$quantityInputs = $('input[type="number"]',this.$panelTwo);
 		},
 		bindEvents: function () {
 			var panelOneInputs = this.$garmentOptions;
 			panelOneInputs.on('click', this.toggleStyle);
 			panelOneInputs.on('deactivate', this.deactivateStyle);
+			
+			var quantityInput = this.$quantityInputs;
+			quantityInput.next().on('click','',{prntObject:quantityInput}, this.addColor);
+			quantityInput.prev().on('click','',{prntObject:quantityInput}, this.removeColor);
 		},
 		render: function () {
       this.$garmentOptions.find('input').iCheck({
@@ -58,6 +64,12 @@ jQuery(function ($) {
           radioClass: 'iradio_square-red',
           increaseArea: '20%' // optional
         });
+		},
+		removeColor: function(e){
+		  console.log(e.data)
+		},
+		addColor: function(e){
+		  console.log(e.data)
 		},
 		activateStyle: function (e) {
 		  var element = e;

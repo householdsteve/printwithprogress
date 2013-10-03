@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="assets/css/bootstrap.glyphicons.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="assets/css/skins/square/red.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
     
     <style>
     body {
@@ -115,53 +116,53 @@
                     </a>
                   </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
+                <div id="collapseOne" class="panel-collapse collapse">
                   <div class="panel-body">
                     <div class="row">
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
-                        <figcaption><input type="radio" name="garment" checked>T-Shirts</figcaption>
+                        <figcaption><input type="radio" name="garment" checked><span>T-Shirts</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
-                        <figcaption><input type="radio" name="garment">Pocket Tees</figcaption>
+                        <figcaption><input type="radio" name="garment"><span>Pocket Tees</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/vneckt.gif" width="133" height="120" alt="Vneckt">
-                        <figcaption><input type="radio" name="garment">V Necks</figcaption>
+                        <figcaption><input type="radio" name="garment"><span>V Necks</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
-                        <figcaption><input type="radio" name="garment">Long Sleeves</figcaption>
+                        <figcaption><input type="radio" name="garment"><span>Long Sleeves</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
-                        <figcaption><input type="radio" name="garment">Pocket Long Sleeves</figcaption>
+                        <figcaption><input type="radio" name="garment"><span>Pocket Long Sleeves</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/golf.gif" width="120" height="120" alt="Golf">
-                        <figcaption><input type="radio" name="garment">Polos</figcaption>
+                        <figcaption><input type="radio" name="garment"><span>Polos</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/ziphoodie.gif" width="90" height="120" alt="Ziphoodie">
-                        <figcaption><input type="radio" name="garment">Zip Hoodies</figcaption>
+                        <figcaption><input type="radio" name="garment"><span>Zip Hoodies</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/pulloverhoodie.gif" width="90" height="120" alt="Pulloverhoodie">
-                        <figcaption><input type="radio" name="garment">Pullover Hoodies</figcaption>
+                        <figcaption><input type="radio" name="garment"><span>Pullover Hoodies</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/cust-supplied.gif" width="120" height="120" alt="Cust Supplied">
-                        <figcaption><input type="radio" name="garment">Customer Supplied Items</figcaption>
+                        <figcaption><input type="radio" name="garment"><span>Customer Supplied Items</span></figcaption>
                       </figure>
                     
                       
@@ -177,9 +178,16 @@
                     </a>
                   </h4>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
+                <div id="collapseTwo" class="panel-collapse collapse in">
                   <div class="panel-body">
-                    make numbers form here
+                    <div class="container">
+                      <label class="quantity-label" for="colors-front">Colors on Front</label>
+                      <div class="input-group">
+                        <span class="input-group-addon">-</span>
+                        <input type="number" class="form-control" name="colors-front" value="1" min="1" max="6">
+                        <span class="input-group-addon">+</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
