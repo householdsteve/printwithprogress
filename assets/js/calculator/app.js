@@ -80,12 +80,13 @@ jQuery(function ($) {
 		activateStyle: function (e) {
 		  var element = e;
 		      element.css({opacity:0.5});
+		      element.find('input').iCheck('toggle');
 		      App.activeStyle = element;
 		},
 		deactivateStyle: function (e) {
 		  var element = $(e.target);
 		  element.css({opacity:1});
-		  
+		  element.find('input').iCheck('toggle');
 		  // should remove object from right here too
 	  },
 		toggleStyle: function (e) {
