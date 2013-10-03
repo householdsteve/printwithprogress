@@ -57,9 +57,8 @@ jQuery(function ($) {
 			var quantityInput = this.$quantityInputs;
 			quantityInput.each(function(i,v){
 			  var _s = $(this);
-			  console.log(_s)
-			  _s.next().on('click','',{prntObject:_s}, this.addColor);
-  			_s.prev().on('click','',{prntObject:_s}, this.removeColor);
+			  _s.next().on('click','',{prntObject:_s}, App.addColor);
+  			_s.prev().on('click','',{prntObject:_s}, App.removeColor);
 			});
 			
 		},
@@ -71,10 +70,12 @@ jQuery(function ($) {
         });
 		},
 		removeColor: function(e){
-		  console.log(e)
+		  var el = e.data.prntObject, min = el.attr('min');
+	  		  if(el.val() > min) el.val(parseInt(el.val())-1);
 		},
 		addColor: function(e){
-		  console.log(e)
+		  var el = e.data.prntObject, max = el.attr('max');
+		  if(el.val() < max) el.val(parseInt(el.val())+1);
 		},
 		activateStyle: function (e) {
 		  var element = e;

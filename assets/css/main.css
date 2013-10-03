@@ -10,5 +10,12 @@ input::-webkit-inner-spin-button {
 }
 
 .input-group-addon:hover {
-  text-decoration:underline;
+  font-weight:bold;
+}
+
+.input-group-addon::selection {
+	background: transparent; /* Safari */
+	}
+.input-group-addon::-moz-selection {
+	background: transparent; /* Firefox */
 }
