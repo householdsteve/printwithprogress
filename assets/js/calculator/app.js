@@ -36,15 +36,33 @@ jQuery(function ($) {
 			this.ENTER_KEY = 13;
 			this.priceQuotes = Utils.store('pricequotes-jquery');
 			this.activeStyle = {};
+			this.positions = Array();
+			this.garmentAttributes = {
+              "tshirt": {
+                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
+                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+              },
+
+          }
+          
 			this.cacheElements();
 			this.bindEvents();
 			this.render();
 		},
 		cacheElements: function () {
-      // this.todoTemplate = Handlebars.compile($('#todo-template').html());
-      // this.footerTemplate = Handlebars.compile($('#footer-template').html());
 			this.$calcInstance = $('#calculator');
 		  this.$builderWell = $('#builder-well');
+		  this.$builderWellContainer = $('.container',this.$builderWell);
+      this.garmentTemplate = {
+        "colors-front" : Handlebars.compile($('#garment-template').html()),
+        "colors-back" : Handlebars.compile($('#garment-template').html()),
+        "colors-left" : Handlebars.compile($('#garment-template').html()),
+        "colors-right" : Handlebars.compile($('#garment-template').html()),
+        "colors-other" : Handlebars.compile($('#garment-template').html()),
+      }
 			this.$panelOne = this.$calcInstance.find('#collapseOne');
 			this.$panelTwo = this.$calcInstance.find('#collapseTwo');			
 			this.$garmentOptions = $('figure',this.$panelOne);
@@ -71,17 +89,60 @@ jQuery(function ($) {
         });
 		},
 		removeColor: function(e){
-		  var el = e.data.prntObject, min = el.attr('min');
-	  		  if(el.val() > min) el.val(parseInt(el.val())-1);
-	  		  
+		  var el = e.data.prntObject, min = el.attr('min'), total;
+		  total = parseInt(el.val())-1; 
+		  if(total > min){
+		    el.val(total);
+		    App.updateBuilder({"action":"update","obj":el,"count":total});
+		  }else{
+		    el.val(min);
+		    App.updateBuilder({"action":"remove","obj":el,"count":total});
+		  } 
+	  		
 	  		  // remove items from builder well and update counts on corresponding elements colors.
 		},
 		addColor: function(e){
-		  var el = e.data.prntObject, max = el.attr('max');
-		  if(el.val() < max) el.val(parseInt(el.val())+1);
+		  var el = e.data.prntObject, max = el.attr('max'), total;
+		  if(el.val() < max){
+		    total = parseInt(el.val())+1; el.val(total);
+		    App.updateBuilder({"action":"update","obj":el,"count":total});
+		  }else{
+		    total = el.val();
+		  } 
+		  
 		  
 		  // we need to add control to change number on visualized garment
 		  // we need to set a variable to check if this location is present and if not add it to builder well
+		},
+		updateBuilder: function(e) {
+      var el = e.obj, name = el[0].name, garment = $('input[name=garmentType]:checked', this.$calcInstance).val();
+		  switch(e.action){
+		    case "update":
+		    console.log($('input[name=garmentType]:checked', this.$calcInstance).val())
+		    //this.garmentAttributes
+    		  	var details = {
+      				contentId: "builder_"+name,
+      				contentClass: " "+name,
+      				imgSrc: this.garmentAttributes[garment][name],
+      				counter: e.count,
+      				description: name
+      			};
+            if($.inArray(name,this.positions) < 0){
+              this.positions.push(name);
+              var current = this.garmentTemplate[name];
+              var counterEl = current(details);
+        			this.$builderWellContainer.append(current(details));
+            }
+            $('.counter-overlay',$("#builder_"+name)).text(e.count);
+
+		    break;
+		    case "remove":
+		        this.positions = $.grep(this.positions, function(value) {
+              return value != name;
+            });
+      			$("#builder_"+name).remove();
+		    break;
+		  }
 		},
 		activateStyle: function (e) {
 		  var element = e;

@@ -100,7 +100,6 @@
       </div>    
     </header>
 
-    
     <div class="container">
       <h1 class="white">APPAREL QUOTE CALCULATOR</h1>
    	  <div class="well">          
@@ -112,7 +111,7 @@
                 <div class="panel-heading">
                   <h4 class="panel-title">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                      1. Select Garment
+                      1. Select garmentType
                     </a>
                   </h4>
                 </div>
@@ -122,47 +121,47 @@
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
-                        <figcaption><input type="radio" name="garment"><span>T-Shirts</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="tshirt" checked><span>T-Shirts</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
-                        <figcaption><input type="radio" name="garment"><span>Pocket Tees</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="pockettshirt"><span>Pocket Tees</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/vneckt.gif" width="133" height="120" alt="Vneckt">
-                        <figcaption><input type="radio" name="garment"><span>V Necks</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="vneckt"><span>V Necks</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
-                        <figcaption><input type="radio" name="garment"><span>Long Sleeves</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="longsleeve"><span>Long Sleeves</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
-                        <figcaption><input type="radio" name="garment"><span>Pocket Long Sleeves</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="longsleeve"><span>Pocket Long Sleeves</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/golf.gif" width="120" height="120" alt="Golf">
-                        <figcaption><input type="radio" name="garment"><span>Polos</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="golf"><span>Polos</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/ziphoodie.gif" width="90" height="120" alt="Ziphoodie">
-                        <figcaption><input type="radio" name="garment"><span>Zip Hoodies</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="ziphoodie"><span>Zip Hoodies</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/pulloverhoodie.gif" width="90" height="120" alt="Pulloverhoodie">
-                        <figcaption><input type="radio" name="garment"><span>Pullover Hoodies</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="pulloverhoodie"><span>Pullover Hoodies</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/cust-supplied.gif" width="120" height="120" alt="Cust Supplied">
-                        <figcaption><input type="radio" name="garment"><span>Customer Supplied Items</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="cust-supplied"><span>Customer Supplied Items</span></figcaption>
                       </figure>
                     
                       
@@ -180,7 +179,14 @@
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse in">
                   <div class="panel-body">
-                    
+                      <div class="container">  
+                        <div class="form-group">
+                            <label for="qty" class="col-md-7 control-label">How many do you need?</label>
+                            <div class="col-md-5">
+                              <input type="text" class="form-control" id="qty" name="qty" placeholder="100">
+                            </div>
+                        </div>
+                      </div>  
                     <div class="container">
                       <label class="quantity-label" for="colors-front">Colors on Front</label>
                       <div class="input-group">
@@ -249,7 +255,7 @@
           </div>
           <div class="col-md-6">
             <div class="well" id="builder-well">
-              <h3>This area builds a mock up of colors on each part of garments</h3>
+              <div class="container"></div>
             </div>
           </div>
         </form>
@@ -341,6 +347,30 @@
    		      <a href="https://plus.google.com/100000049123748979614/about" target="new">364 Hilton Road, Ferndale,	Mich	48220</a><br>
 	      © Progress Custom Screen Printing 2013 </p>
 </footer>
+
+
+    <script id="todo-template" type="text/x-handlebars-template">
+    {{#this}}
+    <li {{#if completed}}class="completed"{{/if}} data-id="{{id}}">
+    <div class="view">
+    	<input class="toggle" type="checkbox" {{#if completed}}checked{{/if}}>
+    	<label>{{title}}</label>
+    	<button class="destroy"></button>
+    </div>
+    <input class="edit" value="{{title}}">
+    </li>
+    {{/this}}
+    </script>
+    
+    <script id="garment-template" type="text/x-handlebars-template">
+      <div id="{{contentId}}" class="template col-md-6{{contentClass}}">
+        <img src="{{imgSrc}}">
+        <div class="counter-overlay">{{counter}}</div>
+        <footer>{{description}}</footer>
+      </div>
+    </script>
+    
+
   </div>
     <!-- /container -->
 
