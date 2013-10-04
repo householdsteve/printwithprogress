@@ -45,6 +45,62 @@ jQuery(function ($) {
                 "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
                 "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
               },
+              "pockettshirt": {
+                "colors-front": "assets/img/calculator-templates/builder/pocket-tshirt.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
+                "colors-other": "assets/img/calculator-templates/builder/pocket-tshirt.png"
+              },
+              "vneckt": {
+                "colors-front": "assets/img/calculator-templates/builder/vneck-tshirt.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
+                "colors-other": "assets/img/calculator-templates/builder/vneck-tshirt.png"
+              },
+              "longsleeve": {
+                "colors-front": "assets/img/calculator-templates/builder/tshirt-longsleeve.png", 
+                "colors-back": "assets/img/calculator-templates/builder/back-longsleeve.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-longsleeve.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-longsleeve.png",
+                "colors-other": "assets/img/calculator-templates/builder/tshirt-longsleeve.png"
+              },
+              "pocketlongsleeve": {
+                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
+                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+              },
+              "polo": {
+                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
+                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+              },
+              "ziphoodie": {
+                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
+                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+              },
+              "pulloverhoodie": {
+                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
+                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+              },
+              "custsupplied": {
+                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
+                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+              }
 
           }
           
