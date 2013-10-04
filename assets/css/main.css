@@ -5,7 +5,7 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-.input-group-addon {
+.input-group-addon, #calculator .panel-heading  {
   cursor:pointer;
 }
 
@@ -18,4 +18,88 @@ input::-webkit-inner-spin-button {
 	}
 .input-group-addon::-moz-selection {
 	background: transparent; /* Firefox */
+}
+
+#calculator .input-group-addon input {
+  text-align:center;
+}
+
+#collapseTwo .row, #collapseTwo .container .row:first-child {
+  margin-top:20px;
+}
+#collapseTwo .row:first-child {
+  margin-top:0px;
+}
+
+.faded {
+  opacity:0.1;
+  display:block;
+  margin:120px auto;
+}
+
+#calculator figure {
+  margin-bottom:15px;
+}
+
+#calculator figure:hover {
+  opacity:0.8 !important;
+}
+#calculator figure, #calculator figcaption {
+  text-align:center;
+}
+#calculator figcaption input[type="radio"] {
+  display:none;
+}
+
+#calculator figcaption div.iradio_square-red {
+/*  position:absolute;
+  width:22px;
+  height:22px;
+  top:50%;
+  left:50%;
+  margin-left:-11px;
+  margin-top:-11px;*/
+}
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: #000;         /* adjust as needed */
+}
+.panel-heading.open .accordion-toggle:after {
+    /* symbol for "collapsed" panels */
+    content: "\e105";    /* adjust as needed, taken from bootstrap.css */
+}
+
+#builder-well .template {
+  text-align:center;
+  position:relative;
+  min-height:170px;
+}
+
+#builder-well .template .counter-overlay {
+  position:absolute;
+  height:40px;
+  width:40px;
+  top:50%;
+  left:50%;
+  margin-left:-20px;
+  margin-top:-20px;
+  background:rgba(0,0,0,0.8);
+  color:#fff;
+  font-size:20px;
+  line-height:40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+#builder-well .template.colors-left .counter-overlay, #builder-well .template.colors-right .counter-overlay {
+  margin-top:0px;
+}
+
+#builder-well .template.colors-other .counter-overlay {
+  margin-top:15px;
+  margin-left:-35px;
 }

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <!-- Le styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="assets/css/bootstrap.glyphicons.css" type="text/css" media="screen" charset="utf-8">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/skins/square/red.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
     
@@ -108,20 +108,20 @@
           <div class="col-md-6">
             <div class="panel-group" id="accordion">
               <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading open">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                       1. Select garmentType
-                    </a>
+                    </span>
                   </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse">
+                <div id="collapseOne" class="panel-collapse collapse in">
                   <div class="panel-body">
                     <div class="row">
                       
                       <figure class="col-md-4 col-xs-2">
                         <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
-                        <figcaption><input type="radio" name="garmentType" value="tshirt" checked><span>T-Shirts</span></figcaption>
+                        <figcaption><input type="radio" name="garmentType" value="tshirt"><span>T-Shirts</span></figcaption>
                       </figure>
                       
                       <figure class="col-md-4 col-xs-2">
@@ -172,14 +172,14 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                       2. Specify quantity and colors
-                    </a>
+                    </span>
                   </h4>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse in">
+                <div id="collapseTwo" class="panel-collapse collapse">
                   <div class="panel-body">
-                      <div class="container">  
+                      <div class="row">  
                         <div class="form-group">
                             <label for="qty" class="col-md-7 control-label">How many do you need?</label>
                             <div class="col-md-5">
@@ -187,60 +187,66 @@
                             </div>
                         </div>
                       </div>  
-                    <div class="container">
-                      <label class="quantity-label" for="colors-front">Colors on Front</label>
-                      <div class="input-group">
+                    <div class="row">
+                      <label class="quantity-label col-md-7 control-label" for="colors-front">Colors on Front</label>
+                      <div class="input-group col-md-3 pull-right">
                         <span class="input-group-addon">-</span>
-                        <input type="number" class="form-control" name="colors-front" value="1" min="0" max="6">
+                        <input type="number" class="form-control" name="colors-front" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
                       </div>
                     </div>
                     
-                    <div class="container">
-                      <label class="quantity-label" for="colors-back">Colors on Back</label>
-                      <div class="input-group">
+                    <div class="row">
+                      <label class="quantity-label col-md-7 control-label" for="colors-back">Colors on Back</label>
+                      <div class="input-group col-md-3 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-back" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
                       </div>
                     </div>
                     
-                    <div class="container">
-                      <label class="quantity-label" for="colors-left">Colors on Left Sleeve</label>
-                      <div class="input-group">
+                    <div class="row">
+                      <label class="quantity-label col-md-7 control-label" for="colors-left">Colors on Left Sleeve</label>
+                      <div class="input-group col-md-3 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-left" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
                       </div>
                     </div>
                     
-                    <div class="container">
-                      <label class="quantity-label" for="colors-right">Colors on Right Sleeve</label>
-                      <div class="input-group">
+                    <div class="row">
+                      <label class="quantity-label col-md-7 control-label" for="colors-right">Colors on Right Sleeve</label>
+                      <div class="input-group col-md-3 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-right" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
                       </div>
                     </div>
                     
-                    <div class="container">
-                      <label class="quantity-label" for="colors-other">Colors on Other Location</label>
-                      <div class="input-group">
+                    <div class="row">
+                      <label class="quantity-label col-md-7 control-label" for="colors-other">Colors on Other Location</label>
+                      <div class="input-group col-md-3 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-other" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
                       </div>
                     </div>
-                    
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                          <button type="button" class="btn btn-primary btn-lg btn-block">Give me my prices!</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                       3. Review price quote
-                    </a>
+                    </span>
                   </h4>
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse">
@@ -254,8 +260,11 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="well" id="builder-well">
-              <div class="container"></div>
+            <h2>We'll keep track of your quote below</h2>
+            <div class="" id="builder-well">
+              <div class="container">
+                <img class="faded" src="assets/img/ink-bucket.png" width="120" alt="Ink Bucket">
+              </div>
             </div>
           </div>
         </form>

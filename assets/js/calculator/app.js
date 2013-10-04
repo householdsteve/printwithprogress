@@ -67,32 +67,32 @@ jQuery(function ($) {
                 "colors-other": "assets/img/calculator-templates/builder/tshirt-longsleeve.png"
               },
               "pocketlongsleeve": {
-                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
-                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
-                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
-                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
-                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+                "colors-front": "assets/img/calculator-templates/builder/pocket-tshirt-longsleeve.png", 
+                "colors-back": "assets/img/calculator-templates/builder/back-longsleeve.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-longsleeve.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-longsleeve.png",
+                "colors-other": "assets/img/calculator-templates/builder/pocket-tshirt-longsleeve.png"
               },
               "polo": {
-                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
+                "colors-front": "assets/img/calculator-templates/builder/polo.png", 
                 "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
                 "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
                 "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
-                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+                "colors-other": "assets/img/calculator-templates/builder/polo.png"
               },
               "ziphoodie": {
-                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
-                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
-                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
-                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
-                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+                "colors-front": "assets/img/calculator-templates/builder/hoodie-zip.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-hoodie.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-hoodie.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-hoodie.png",
+                "colors-other": "assets/img/calculator-templates/builder/hoodie-zip.png"
               },
               "pulloverhoodie": {
-                "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
-                "colors-back": "assets/img/calculator-templates/builder/generic-back-shirt.png",
-                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-tshirt.png", 
-                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-tshirt.png",
-                "colors-other": "assets/img/calculator-templates/builder/tshirt.png"
+                "colors-front": "assets/img/calculator-templates/builder/hoodie-pullover.png", 
+                "colors-back": "assets/img/calculator-templates/builder/generic-back-hoodie.png",
+                "colors-left": "assets/img/calculator-templates/builder/left-sleeve-hoodie.png", 
+                "colors-right": "assets/img/calculator-templates/builder/right-sleeve-hoodie.png",
+                "colors-other": "assets/img/calculator-templates/builder/hoodie-pullover.png"
               },
               "custsupplied": {
                 "colors-front": "assets/img/calculator-templates/builder/tshirt.png", 
@@ -120,7 +120,9 @@ jQuery(function ($) {
         "colors-other" : Handlebars.compile($('#garment-template').html()),
       }
 			this.$panelOne = this.$calcInstance.find('#collapseOne');
-			this.$panelTwo = this.$calcInstance.find('#collapseTwo');			
+			this.$panelTwo = this.$calcInstance.find('#collapseTwo');
+			this.$panelThree = this.$calcInstance.find('#collapseThree');		
+			this.$panelArray = Array(this.$panelOne,this.$panelTwo,this.$panelThree);
 			this.$garmentOptions = $('figure',this.$panelOne);
 			this.$quantityInputs = $('input[type="number"]',this.$panelTwo);
 		},
@@ -128,6 +130,12 @@ jQuery(function ($) {
 			var panelOneInputs = this.$garmentOptions;
 			panelOneInputs.on('click', this.toggleStyle);
 			panelOneInputs.on('deactivate', this.deactivateStyle);
+			panelOneInputs.on('mouseover', this.garmentHoverOver);
+			panelOneInputs.on('mouseout', this.garmentHoverOut);
+			
+			this.$panelOne.prev().on('click','',{prntObject:this.$panelOne}, this.togglePanel);
+			this.$panelTwo.prev().on('click','',{prntObject:this.$panelTwo}, this.togglePanel);
+			this.$panelThree.prev().on('click','',{prntObject:this.$panelThree}, this.togglePanel);
 			
 			var quantityInput = this.$quantityInputs;
 			quantityInput.each(function(i,v){
@@ -138,11 +146,24 @@ jQuery(function ($) {
 			
 		},
 		render: function () {
-      this.$garmentOptions.find('input').iCheck({
-          checkboxClass: 'icheckbox_square-red',
-          radioClass: 'iradio_square-red',
-          increaseArea: '20%' // optional
-        });
+      // this.$garmentOptions.find('input').iCheck({
+      //           checkboxClass: 'icheckbox_square-red',
+      //           radioClass: 'iradio_square-red',
+      //           increaseArea: '20%' // optional
+      //         });
+		},
+		togglePanel: function(e){
+		  e.stopImmediatePropagation();
+      $(e.currentTarget).addClass('open');
+		  var el = e.data.prntObject;
+		  $.each(App.$panelArray,function(i,v){
+		    if($(this).hasClass('in')){
+		      $(this).collapse('hide');
+		      $(this).prev().removeClass('open');
+		    } 
+		  })
+		  el.collapse('show');
+		  //return false;
 		},
 		removeColor: function(e){
 		  var el = e.data.prntObject, min = el.attr('min'), total;
@@ -154,8 +175,6 @@ jQuery(function ($) {
 		    el.val(min);
 		    App.updateBuilder({"action":"remove","obj":el,"count":total});
 		  } 
-	  		
-	  		  // remove items from builder well and update counts on corresponding elements colors.
 		},
 		addColor: function(e){
 		  var el = e.data.prntObject, max = el.attr('max'), total;
@@ -165,23 +184,17 @@ jQuery(function ($) {
 		  }else{
 		    total = el.val();
 		  } 
-		  
-		  
-		  // we need to add control to change number on visualized garment
-		  // we need to set a variable to check if this location is present and if not add it to builder well
 		},
 		updateBuilder: function(e) {
       var el = e.obj, name = el[0].name, garment = $('input[name=garmentType]:checked', this.$calcInstance).val();
 		  switch(e.action){
 		    case "update":
-		    console.log($('input[name=garmentType]:checked', this.$calcInstance).val())
-		    //this.garmentAttributes
     		  	var details = {
       				contentId: "builder_"+name,
       				contentClass: " "+name,
       				imgSrc: this.garmentAttributes[garment][name],
       				counter: e.count,
-      				description: name
+      				description: el.parent().prev().text()
       			};
             if($.inArray(name,this.positions) < 0){
               this.positions.push(name);
@@ -189,8 +202,24 @@ jQuery(function ($) {
               var counterEl = current(details);
         			this.$builderWellContainer.append(current(details));
             }
+            
             $('.counter-overlay',$("#builder_"+name)).text(e.count);
 
+		    break;
+		    case "refresh":
+		      if(this.positions.length < 1){
+  		      this.$builderWellContainer.empty().data("garment",garment).addClass(garment);
+  		      this.addColor({"data":{"prntObject":$(this.$quantityInputs[0])}});
+  		    }else{
+  		      var dg = this.$builderWellContainer.data("garment");
+  		      this.$builderWellContainer.removeClass(dg).addClass(garment).data("garment",garment);
+  		    } 
+		    
+		      this.$quantityInputs.each(function(i,v){
+		        if($.inArray(this.name,App.positions) >= 0){
+              $("#builder_"+this.name+" img").attr("src",App.garmentAttributes[garment][this.name]);
+		        }
+		      })
 		    break;
 		    case "remove":
 		        this.positions = $.grep(this.positions, function(value) {
@@ -200,16 +229,28 @@ jQuery(function ($) {
 		    break;
 		  }
 		},
+		garmentHoverOver: function(e){
+		  var element = $(this);
+		  //element.css({opacity:0.8});
+		},
+		garmentHoverOut: function(e){
+		  var element = $(this);
+		  //element.css({opacity:1});
+		},
 		activateStyle: function (e) {
 		  var element = e;
 		      element.css({opacity:0.5});
 		      element.find('input').iCheck('toggle');
 		      App.activeStyle = element;
+		      //this.$panelOne.collapse('hide');
+		      //this.$panelTwo.collapse('show');
+		      this.$panelTwo.prev().trigger('click');
+		      App.updateBuilder({"action":"refresh","obj":$(this.$quantityInputs[0])});
 		},
 		deactivateStyle: function (e) {
 		  var element = $(e.target);
 		  element.css({opacity:1});
-		  element.find('input').iCheck('toggle');
+		  //element.find('input').iCheck('toggle');
 		  // should remove object from right here too
 	  },
 		toggleStyle: function (e) {
