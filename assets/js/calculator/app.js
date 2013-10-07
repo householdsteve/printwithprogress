@@ -119,12 +119,14 @@ jQuery(function ($) {
         "colors-right" : Handlebars.compile($('#garment-template').html()),
         "colors-other" : Handlebars.compile($('#garment-template').html()),
       }
+      this.itemTemplate = Handlebars.compile($('#item-template').html());
 			this.$panelOne = this.$calcInstance.find('#collapseOne');
 			this.$panelTwo = this.$calcInstance.find('#collapseTwo');
 			this.$panelThree = this.$calcInstance.find('#collapseThree');		
 			this.$panelArray = Array(this.$panelOne,this.$panelTwo,this.$panelThree);
 			this.$garmentOptions = $('figure',this.$panelOne);
 			this.$quantityInputs = $('input[type="number"]',this.$panelTwo);
+			this.$tableResults = $('#apiResults');	
 		},
 		bindEvents: function () {
 			var panelOneInputs = this.$garmentOptions;
@@ -144,13 +146,42 @@ jQuery(function ($) {
   			_s.prev().on('click','',{prntObject:_s}, App.removeColor);
 			});
 			
+			this.$calcInstance.on("submit",function(e){return false;}).validate({
+        errorElement:"em",
+        rules: {
+            qty:{
+              number:true
+            }
+          },
+        submitHandler: function(form) {
+          App.processForm(form);
+          return false;
+        }
+       });
 		},
 		render: function () {
+       
       // this.$garmentOptions.find('input').iCheck({
       //           checkboxClass: 'icheckbox_square-red',
       //           radioClass: 'iradio_square-red',
       //           increaseArea: '20%' // optional
       //         });
+		},
+		processForm: function(form){
+		  $.ajax({
+    					url: 'calculate.php',
+  						data: $(form).serialize() + '&meth=send',
+  						type: 'post',
+  						cache: false,
+  						dataType: 'json',
+  						error: function(){alert('didnt work, try agin in a sec.');},
+  						success:App.refreshTables
+    		  });
+		},
+		refreshTables: function(data){
+		  console.log(data);
+		  App.$panelThree.prev().trigger('click');
+		  App.$tableResults.html(App.itemTemplate(data));
 		},
 		togglePanel: function(e){
 		  e.stopImmediatePropagation();

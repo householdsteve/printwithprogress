@@ -103,7 +103,7 @@
     <div class="container">
       <h1 class="white">APPAREL QUOTE CALCULATOR</h1>
    	  <div class="well">          
-        <form id="calculator" class="row" action="#" method="post" accept-charset="utf-8">
+        <form id="calculator" class="row" action="calculate.php" method="post" accept-charset="utf-8">
 
           <div class="col-md-6">
             <div class="panel-group" id="accordion">
@@ -119,48 +119,48 @@
                   <div class="panel-body">
                     <div class="row">
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
                         <figcaption><input type="radio" name="garmentType" value="tshirt"><span>T-Shirts</span></figcaption>
                       </figure>
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
                         <figcaption><input type="radio" name="garmentType" value="pockettshirt"><span>Pocket Tees</span></figcaption>
                       </figure>
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/vneckt.gif" width="133" height="120" alt="Vneckt">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/vneckt.gif" width="133" height="120" alt="Vneckt">
                         <figcaption><input type="radio" name="garmentType" value="vneckt"><span>V Necks</span></figcaption>
                       </figure>
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
                         <figcaption><input type="radio" name="garmentType" value="longsleeve"><span>Long Sleeves</span></figcaption>
                       </figure>
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
                         <figcaption><input type="radio" name="garmentType" value="pocketlongsleeve"><span>Pocket Long Sleeves</span></figcaption>
                       </figure>
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/golf.gif" width="120" height="120" alt="Golf">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/golf.gif" width="120" height="120" alt="Golf">
                         <figcaption><input type="radio" name="garmentType" value="polo"><span>Polos</span></figcaption>
                       </figure>
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/ziphoodie.gif" width="90" height="120" alt="Ziphoodie">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/ziphoodie.gif" width="90" height="120" alt="Ziphoodie">
                         <figcaption><input type="radio" name="garmentType" value="ziphoodie"><span>Zip Hoodies</span></figcaption>
                       </figure>
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/pulloverhoodie.gif" width="90" height="120" alt="Pulloverhoodie">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/pulloverhoodie.gif" width="90" height="120" alt="Pulloverhoodie">
                         <figcaption><input type="radio" name="garmentType" value="pulloverhoodie"><span>Pullover Hoodies</span></figcaption>
                       </figure>
                       
-                      <figure class="col-md-4 col-xs-2">
-                        <img src="assets/img/calculator-templates/cust-supplied.gif" width="120" height="120" alt="Cust Supplied">
+                      <figure class="col-md-4 col-sm-4 col-xs-4">
+                        <img class="img-responsive" src="assets/img/calculator-templates/cust-supplied.gif" width="120" height="120" alt="Cust Supplied">
                         <figcaption><input type="radio" name="garmentType" value="custsupplied"><span>Customer Supplied Items</span></figcaption>
                       </figure>
                     
@@ -183,13 +183,13 @@
                         <div class="form-group">
                             <label for="qty" class="col-md-7 control-label">How many do you need?</label>
                             <div class="col-md-5">
-                              <input type="text" class="form-control" id="qty" name="qty" placeholder="100">
+                              <input type="text" class="form-control" id="qty" name="qty" placeholder="100"  pattern="\d*" required>
                             </div>
                         </div>
                       </div>  
                     <div class="row">
-                      <label class="quantity-label col-md-7 control-label" for="colors-front">Colors on Front</label>
-                      <div class="input-group col-md-3 pull-right">
+                      <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-front">Colors on Front</label>
+                      <div class="input-group col-md-3 col-sm-4 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-front" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
@@ -197,8 +197,8 @@
                     </div>
                     
                     <div class="row">
-                      <label class="quantity-label col-md-7 control-label" for="colors-back">Colors on Back</label>
-                      <div class="input-group col-md-3 pull-right">
+                      <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-back">Colors on Back</label>
+                      <div class="input-group col-md-3 col-sm-4 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-back" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
@@ -206,8 +206,8 @@
                     </div>
                     
                     <div class="row">
-                      <label class="quantity-label col-md-7 control-label" for="colors-left">Colors on Left Sleeve</label>
-                      <div class="input-group col-md-3 pull-right">
+                      <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-left">Colors on Left Sleeve</label>
+                      <div class="input-group col-md-3 col-sm-4 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-left" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
@@ -215,8 +215,8 @@
                     </div>
                     
                     <div class="row">
-                      <label class="quantity-label col-md-7 control-label" for="colors-right">Colors on Right Sleeve</label>
-                      <div class="input-group col-md-3 pull-right">
+                      <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-right">Colors on Right Sleeve</label>
+                      <div class="input-group col-md-3 col-sm-4 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-right" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
@@ -224,8 +224,8 @@
                     </div>
                     
                     <div class="row">
-                      <label class="quantity-label col-md-7 control-label" for="colors-other">Colors on Other Location</label>
-                      <div class="input-group col-md-3 pull-right">
+                      <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-other">Colors on Other Location</label>
+                      <div class="input-group col-md-3 col-sm-4 pull-right">
                         <span class="input-group-addon">-</span>
                         <input type="number" class="form-control" name="colors-other" value="0" min="0" max="6">
                         <span class="input-group-addon">+</span>
@@ -234,7 +234,7 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                          <button type="button" class="btn btn-primary btn-lg btn-block">Give me my prices!</button>
+                          <input type="submit" class="btn btn-primary btn-lg btn-block" value="Give me my prices!">
                         </div>
                       </div>
                     </div>
@@ -251,9 +251,14 @@
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse">
                   <div class="panel-body">
-                    <div class="alert alert-danger">
-                      You have not specified print details. Please follow steps 1 &amp; 2.
-                    </div>
+                    <table border="0">
+                     <thead>
+                      <tr><th class="l"><span>&nbsp;</span></th><th class="l"><span>Item</span></th><th>Piece Price</th><th>Total</th><th>Share</th></tr>
+                     </thead>
+                     <tbody id="apiResults">
+                      <tr class="alert alert-danger"><td colspan="4">You have not specified print details. Please follow steps 1 &amp; 2.</td></tr>
+                     </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -358,17 +363,10 @@
 </footer>
 
 
-    <script id="todo-template" type="text/x-handlebars-template">
-    {{#this}}
-    <li {{#if completed}}class="completed"{{/if}} data-id="{{id}}">
-    <div class="view">
-    	<input class="toggle" type="checkbox" {{#if completed}}checked{{/if}}>
-    	<label>{{title}}</label>
-    	<button class="destroy"></button>
-    </div>
-    <input class="edit" value="{{title}}">
-    </li>
-    {{/this}}
+    <script id="item-template" type="text/x-handlebars-template">
+    {{#each items}}
+    <tr data-id="{{id}}"><td class="{{thumbclass}}">{{thumb}}</td><td class="l"><span>{{itemName}}</span></td><td>{{itemPriceFormatted}}</td><td>{{quoteTotalFormatted}}</td><td>{{share}}</td></tr>
+    {{/each}}
     </script>
     
     <script id="garment-template" type="text/x-handlebars-template">
@@ -397,6 +395,8 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.icheck.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/js/handlebars/handlebars.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+    https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js
     <script src="assets/js/calculator/app.js" type="text/javascript" charset="utf-8"></script>
     
   </body>

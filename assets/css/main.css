@@ -20,7 +20,7 @@ input::-webkit-inner-spin-button {
 	background: transparent; /* Firefox */
 }
 
-#calculator .input-group-addon input {
+#collapseTwo input.form-control {
   text-align:center;
 }
 
@@ -39,6 +39,10 @@ input::-webkit-inner-spin-button {
 
 #calculator figure {
   margin-bottom:15px;
+}
+
+#calculator figure img {
+
 }
 
 #calculator figure:hover {

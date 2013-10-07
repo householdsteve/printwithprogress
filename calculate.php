@@ -1,93 +1,93 @@
 <?php
 $accompanyImages = array("images/t-shirt.gif","images/vneckt.gif","images/ziphoodie.gif","images/pulloverhoodie.gif","images/longsleeve.gif","images/golf.gif","images/cust-supplied.gif");
 $garmentArray = array();
-$garmentArray[0]["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 100% or 50/50 Cotton");
-$garmentArray[0]["price"][] = "2.70";
-$garmentArray[0]["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=G500&h=hosted&noCache=5020111308439635771";
-$garmentArray[0]["accImm"][] = 0;
-$garmentArray[0]["info"][] = array("id"=>1 ,"garName"=>"Ring spun 100% Cotton");
-$garmentArray[0]["price"][] = "3.55";
-$garmentArray[0]["link"][] = "";
-$garmentArray[0]["accImm"][] = 0;
-$garmentArray[0]["info"][] = array("id"=>2 ,"garName"=>"American App. 2001 or 2102 100% Cotton");
-$garmentArray[0]["price"][] = "5.30";
-$garmentArray[0]["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=2001&n=Fine%20Jersey%3Cbr%3EShort%20Sleeve%20T-Shirt";
-$garmentArray[0]["accImm"][] = 0;
-$garmentArray[0]["info"][] = array("id"=>3 ,"garName"=>"American App. BB401 50/50");
-$garmentArray[0]["price"][] = "5.70";
-$garmentArray[0]["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=BB401&n=Poly-Cotton%3Cbr%3EShort%20Sleeve%20Crew%20Neck";
-$garmentArray[0]["accImm"][] = 0;
-$garmentArray[0]["info"][] = array("id"=>4 ,"garName"=>"American App. TR401 Tri-Blend");
-$garmentArray[0]["price"][] = "7.00";
-$garmentArray[0]["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=TR401&n=Tri-Blend%3Cbr%3EShort%20Sleeve%20Track%20Shirt";
-$garmentArray[0]["accImm"][] = 0;
-$garmentArray[0]["info"][] = array("id"=>5 ,"garName"=>"Tul-tex 100% Cotton");
-$garmentArray[0]["price"][] = "3.10";
-$garmentArray[0]["link"][] = "";
-$garmentArray[0]["accImm"][] = 0;
+$garmentArray['tshirt']["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 100% or 50/50 Cotton");
+$garmentArray['tshirt']["price"][] = "2.70";
+$garmentArray['tshirt']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=G500&h=hosted&noCache=5020111308439635771";
+$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["info"][] = array("id"=>1 ,"garName"=>"Ring spun 100% Cotton");
+$garmentArray['tshirt']["price"][] = "3.55";
+$garmentArray['tshirt']["link"][] = "";
+$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["info"][] = array("id"=>2 ,"garName"=>"American App. 2001 or 2102 100% Cotton");
+$garmentArray['tshirt']["price"][] = "5.30";
+$garmentArray['tshirt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=2001&n=Fine%20Jersey%3Cbr%3EShort%20Sleeve%20T-Shirt";
+$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["info"][] = array("id"=>3 ,"garName"=>"American App. BB401 50/50");
+$garmentArray['tshirt']["price"][] = "5.70";
+$garmentArray['tshirt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=BB401&n=Poly-Cotton%3Cbr%3EShort%20Sleeve%20Crew%20Neck";
+$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["info"][] = array("id"=>4 ,"garName"=>"American App. TR401 Tri-Blend");
+$garmentArray['tshirt']["price"][] = "7.00";
+$garmentArray['tshirt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=TR401&n=Tri-Blend%3Cbr%3EShort%20Sleeve%20Track%20Shirt";
+$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["info"][] = array("id"=>5 ,"garName"=>"Tul-tex 100% Cotton");
+$garmentArray['tshirt']["price"][] = "3.10";
+$garmentArray['tshirt']["link"][] = "";
+$garmentArray['tshirt']["accImm"][] = 0;
 
-$garmentArray[1]["info"][] = array("id"=>0 ,"garName"=>"American App. 2456");
-$garmentArray[1]["price"][] = "5.95";
-$garmentArray[1]["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=2456&n=Fine%20Jersey%3Cbr%3EShort%20Sleeve%20V-Neck";
-$garmentArray[1]["accImm"][] = 1;
-$garmentArray[1]["info"][] = array("id"=>1 ,"garName"=>"American App. Deep V 6456");
-$garmentArray[1]["price"][] = "7.15";
-$garmentArray[1]["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=6456&n=Sheer%20Jersey%20Short%20Sleeve%20Deep%20V-Neck";
-$garmentArray[1]["accImm"][] = 1;
+$garmentArray['vneckt']["info"][] = array("id"=>0 ,"garName"=>"American App. 2456");
+$garmentArray['vneckt']["price"][] = "5.95";
+$garmentArray['vneckt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=2456&n=Fine%20Jersey%3Cbr%3EShort%20Sleeve%20V-Neck";
+$garmentArray['vneckt']["accImm"][] = 1;
+$garmentArray['vneckt']["info"][] = array("id"=>1 ,"garName"=>"American App. Deep V 6456");
+$garmentArray['vneckt']["price"][] = "7.15";
+$garmentArray['vneckt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=6456&n=Sheer%20Jersey%20Short%20Sleeve%20Deep%20V-Neck";
+$garmentArray['vneckt']["accImm"][] = 1;
 
-$garmentArray[2]["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 8oz 50/50");
-$garmentArray[2]["price"][] = "15.15";
-$garmentArray[2]["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=996&h=hosted&noCache=5020111308440812361";
-$garmentArray[2]["accImm"][] = 2;
-$garmentArray[2]["info"][] = array("id"=>1 ,"garName"=>"Fruit/Gildan/Jerzees 9.5oz 50/50");
-$garmentArray[2]["price"][] = "20.15";
-$garmentArray[2]["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4999&h=hosted&noCache=5020111308440799724";
-$garmentArray[2]["accImm"][] = 2;
-$garmentArray[2]["info"][] = array("id"=>2 ,"garName"=>"American App. 5497");
-$garmentArray[2]["price"][] = "21.55";
-$garmentArray[2]["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=5497&n=California%20Fleece%3Cbr%3EZip%20Hoody";
-$garmentArray[2]["accImm"][] = 2;
-$garmentArray[2]["info"][] = array("id"=>3 ,"garName"=>"American App. FlexFleece F497");
-$garmentArray[2]["price"][] = "20.50";
-$garmentArray[2]["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=F497&n=Flex%20Fleece%3Cbr%3EZip%20Hoody";
-$garmentArray[2]["accImm"][] = 2;
+$garmentArray['ziphoodie']["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 8oz 50/50");
+$garmentArray['ziphoodie']["price"][] = "15.15";
+$garmentArray['ziphoodie']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=996&h=hosted&noCache=5020111308440812361";
+$garmentArray['ziphoodie']["accImm"][] = 2;
+$garmentArray['ziphoodie']["info"][] = array("id"=>1 ,"garName"=>"Fruit/Gildan/Jerzees 9.5oz 50/50");
+$garmentArray['ziphoodie']["price"][] = "20.15";
+$garmentArray['ziphoodie']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4999&h=hosted&noCache=5020111308440799724";
+$garmentArray['ziphoodie']["accImm"][] = 2;
+$garmentArray['ziphoodie']["info"][] = array("id"=>2 ,"garName"=>"American App. 5497");
+$garmentArray['ziphoodie']["price"][] = "21.55";
+$garmentArray['ziphoodie']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=5497&n=California%20Fleece%3Cbr%3EZip%20Hoody";
+$garmentArray['ziphoodie']["accImm"][] = 2;
+$garmentArray['ziphoodie']["info"][] = array("id"=>3 ,"garName"=>"American App. FlexFleece F497");
+$garmentArray['ziphoodie']["price"][] = "20.50";
+$garmentArray['ziphoodie']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=F497&n=Flex%20Fleece%3Cbr%3EZip%20Hoody";
+$garmentArray['ziphoodie']["accImm"][] = 2;
 
-$garmentArray[3]["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 8oz 50/50 Cotton");
-$garmentArray[3]["price"][] = "11.05";
-$garmentArray[3]["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=16130&h=hosted&noCache=5020111308440399268";
-$garmentArray[3]["accImm"][] = 3;
-$garmentArray[3]["info"][] = array("id"=>1 ,"garName"=>"Fruit/Gildan/Jerzees 9.5oz 50/50 Cotton");
-$garmentArray[3]["price"][] = "13.60";
-$garmentArray[3]["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4997&h=hosted&noCache=5020111308440432619";
-$garmentArray[3]["accImm"][] = 3;
-$garmentArray[3]["info"][] = array("id"=>2 ,"garName"=>"American App. 5495");
-$garmentArray[3]["price"][] = "17.60";
-$garmentArray[3]["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=5495&n=California%20Fleece%3Cbr%3EPullover%20Hoody";
-$garmentArray[3]["accImm"][] = 3;
+$garmentArray['pulloverhoodie']["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 8oz 50/50 Cotton");
+$garmentArray['pulloverhoodie']["price"][] = "11.05";
+$garmentArray['pulloverhoodie']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=16130&h=hosted&noCache=5020111308440399268";
+$garmentArray['pulloverhoodie']["accImm"][] = 3;
+$garmentArray['pulloverhoodie']["info"][] = array("id"=>1 ,"garName"=>"Fruit/Gildan/Jerzees 9.5oz 50/50 Cotton");
+$garmentArray['pulloverhoodie']["price"][] = "13.60";
+$garmentArray['pulloverhoodie']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4997&h=hosted&noCache=5020111308440432619";
+$garmentArray['pulloverhoodie']["accImm"][] = 3;
+$garmentArray['pulloverhoodie']["info"][] = array("id"=>2 ,"garName"=>"American App. 5495");
+$garmentArray['pulloverhoodie']["price"][] = "17.60";
+$garmentArray['pulloverhoodie']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=5495&n=California%20Fleece%3Cbr%3EPullover%20Hoody";
+$garmentArray['pulloverhoodie']["accImm"][] = 3;
 
-$garmentArray[4]["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 100% or 50/50 Cotton");
-$garmentArray[4]["price"][] = "4.55";
-$garmentArray[4]["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4930&h=hosted&noCache=5020111308440479949";
-$garmentArray[4]["accImm"][] = 4;
+$garmentArray['longsleeve']["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 100% or 50/50 Cotton");
+$garmentArray['longsleeve']["price"][] = "4.55";
+$garmentArray['longsleeve']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4930&h=hosted&noCache=5020111308440479949";
+$garmentArray['longsleeve']["accImm"][] = 4;
 
-$garmentArray[5]["info"][] = array("id"=>0 ,"garName"=>"Generic Golf/Sport 100% or 50/50 Cotton");
-$garmentArray[5]["price"][] = "6.15";
-$garmentArray[5]["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=437&h=hosted&noCache=5020111308440577529";
-$garmentArray[5]["accImm"][] = 5;
-$garmentArray[5]["info"][] = array("id"=>1 ,"garName"=>"Generic Golf/Sport 100% or 50/50 Cotton W/Pocket");
-$garmentArray[5]["price"][] = "7.55";
-$garmentArray[5]["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=436P&h=hosted&noCache=5020111308440564260";
-$garmentArray[5]["accImm"][] = 5;
+$garmentArray['polo']["info"][] = array("id"=>0 ,"garName"=>"Generic Golf/Sport 100% or 50/50 Cotton");
+$garmentArray['polo']["price"][] = "6.15";
+$garmentArray['polo']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=437&h=hosted&noCache=5020111308440577529";
+$garmentArray['polo']["accImm"][] = 5;
+$garmentArray['polo']["info"][] = array("id"=>1 ,"garName"=>"Generic Golf/Sport 100% or 50/50 Cotton W/Pocket");
+$garmentArray['polo']["price"][] = "7.55";
+$garmentArray['polo']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=436P&h=hosted&noCache=5020111308440564260";
+$garmentArray['polo']["accImm"][] = 5;
 
-$garmentArray[6]["info"][] = array("id"=>0 ,"garName"=>"Customer Supplied");
-$garmentArray[6]["price"][] = "0.50";
-$garmentArray[6]["link"][] = "";
-$garmentArray[6]["accImm"][] = 6;
+$garmentArray['custsupplied']["info"][] = array("id"=>0 ,"garName"=>"Customer Supplied");
+$garmentArray['custsupplied']["price"][] = "0.50";
+$garmentArray['custsupplied']["link"][] = "";
+$garmentArray['custsupplied']["accImm"][] = 6;
 
-$garmentArray[7]["info"][] = array("id"=>0 ,"garName"=>"Enter Custom Item Cost Below.");
-$garmentArray[7]["price"][] = "0";
-$garmentArray[7]["link"][] = "";
-$garmentArray[7]["accImm"][] = 6;
+$garmentArray['custom']["info"][] = array("id"=>0 ,"garName"=>"Enter Custom Item Cost Below.");
+$garmentArray['custom']["price"][] = "0";
+$garmentArray['custom']["link"][] = "";
+$garmentArray['custom']["accImm"][] = 6;
 
 
 $locCost = 0.10;
@@ -119,7 +119,7 @@ $printColors_other = $_POST["colors-other"];
   
   $qty = 96; // this will give us an upsell suggestion
   $garmentStyle = 0;
-  $garmentType = 0;
+  $garmentType = 'tshirt';
   $taxDeduct = 0;
   $discCode = 0;
   $garmentMarkUp = $garmentArray[$garmentType]["price"][$garmentStyle];
@@ -547,7 +547,6 @@ function cost_compare($a, $b)
    
 }
 
-include("db.php");
 
 if(isset($_POST[customItem])){
 	$finalGarDesc = $_POST[customItem];
@@ -556,20 +555,21 @@ if(isset($_POST[customItem])){
 }
 
 // ORDER RESULTS BY LOWEST TO HIGHEST
-uasort($data['items'], 'cost_compare');
+usort($data['items'], 'cost_compare');
 
 // prepare query for data entry
 
-$printInfo = array("item_type"=>"garment","colors_front"=>$printColors_front,"colors_back"=>$printColors_back,"colors_left"=>$printColors_left,"colors_right"=>$printColors_right,"colors_other"=>$printColors_other,"garment_type"=>$finalGarDesc,"discount"=>$discCode);
-
-$sql2 = "INSERT INTO `price_quotes` (`ip_address`, `qty`,`piece_price`,`total_tax`,`total_price`,`printing_info`,`error_msg`)
-VALUES ('".getRealIpAddr()."', '$qty','".$data[items][0][piecePrice]."','".$data[items][0][taxTotal]."','".$data[items][0][quoteTotal]."','".serialize($data['items'])."','".serialize($data['error'])."');";
-
+// $printInfo = array("item_type"=>"garment","colors_front"=>$printColors_front,"colors_back"=>$printColors_back,"colors_left"=>$printColors_left,"colors_right"=>$printColors_right,"colors_other"=>$printColors_other,"garment_type"=>$finalGarDesc,"discount"=>$discCode);
+// 
+// $sql2 = "INSERT INTO `price_quotes` (`ip_address`, `qty`,`piece_price`,`total_tax`,`total_price`,`printing_info`,`error_msg`)
+// VALUES ('".getRealIpAddr()."', '$qty','".$data[items][0][piecePrice]."','".$data[items][0][taxTotal]."','".$data[items][0][quoteTotal]."','".serialize($data['items'])."','".serialize($data['error'])."');";
+// 
 
 // send back data if everything goes ok.
       
     //if(mysql_query($sql2)){
 		 	$encoded = json_encode($data);
+		 	header('Content-type: application/json');
 		  die($encoded);
 	   //}else{
 		//  $data["errorText"] = "We encountered an error. Please try again.";  
