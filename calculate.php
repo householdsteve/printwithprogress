@@ -78,6 +78,17 @@ $garmentArray['polo']["price"][] = "7.55";
 $garmentArray['polo']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=436P&h=hosted&noCache=5020111308440564260";
 $garmentArray['polo']["accImm"][] = "assets/img/calculator-templates/golf.gif";
 
+$garmentArray['pockettshirt']["info"][] = array("id"=>0 ,"garName"=>"Generic Pocket t-shirt 100% or 50/50 Cotton");
+$garmentArray['pockettshirt']["price"][] = "0.00";
+$garmentArray['pockettshirt']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=437&h=hosted&noCache=5020111308440577529";
+$garmentArray['pockettshirt']["accImm"][] = "assets/img/calculator-templates/golf.gif";
+
+$garmentArray['pocketlongsleeve']["info"][] = array("id"=>0 ,"garName"=>"Pocket Long Fruit/Gildan/Jerzees 100% or 50/50 Cotton");
+$garmentArray['pocketlongsleeve']["price"][] = "0.00";
+$garmentArray['pocketlongsleeve']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4930&h=hosted&noCache=5020111308440479949";
+$garmentArray['pocketlongsleeve']["accImm"][] = "assets/img/calculator-templates/longsleeve.gif";
+
+
 $garmentArray['custsupplied']["info"][] = array("id"=>0 ,"garName"=>"Customer Supplied");
 $garmentArray['custsupplied']["price"][] = "0.50";
 $garmentArray['custsupplied']["link"][] = "";
