@@ -47,6 +47,7 @@ function process_page_call($URLPARTS){
           "secure" => $is_page_secure,
           "nav" => $sitemap, // send an object here
           "args" => $URLPARTS, // SEND ALL OF THE ARGUMENTS TO USE USED IN THE PAGE
+          "googleanalytics" => "XX-XXXXXXXX" // THIS IS THE GOOGLE ANALYTICS TRACKING ID FROM YOUR CONTROL PANEL
           "titlebase" => "Progress Custom Screen Printing - ", // THE FIRST PART OF THE PAGE TITLE
           "title"=>"Welcome", // THE SECOND PART OF PAGE TITLE. THIS SHOULD BE EXTENDED BELOW BASED ON CONTENT
           "description" => "XXXXX", // THIS IS FOR META TAGS
