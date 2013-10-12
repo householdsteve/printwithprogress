@@ -1,93 +1,92 @@
 <?php
-$accompanyImages = array("images/t-shirt.gif","images/vneckt.gif","images/ziphoodie.gif","images/pulloverhoodie.gif","images/longsleeve.gif","images/golf.gif","images/cust-supplied.gif");
 $garmentArray = array();
 $garmentArray['tshirt']["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 100% or 50/50 Cotton");
 $garmentArray['tshirt']["price"][] = "2.70";
 $garmentArray['tshirt']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=G500&h=hosted&noCache=5020111308439635771";
-$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["accImm"][] = "assets/img/calculator-templates/t-shirt.gif";
 $garmentArray['tshirt']["info"][] = array("id"=>1 ,"garName"=>"Ring spun 100% Cotton");
 $garmentArray['tshirt']["price"][] = "3.55";
 $garmentArray['tshirt']["link"][] = "";
-$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["accImm"][] = "assets/img/calculator-templates/t-shirt.gif";
 $garmentArray['tshirt']["info"][] = array("id"=>2 ,"garName"=>"American App. 2001 or 2102 100% Cotton");
 $garmentArray['tshirt']["price"][] = "5.30";
 $garmentArray['tshirt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=2001&n=Fine%20Jersey%3Cbr%3EShort%20Sleeve%20T-Shirt";
-$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["accImm"][] = "assets/img/calculator-templates/t-shirt.gif";
 $garmentArray['tshirt']["info"][] = array("id"=>3 ,"garName"=>"American App. BB401 50/50");
 $garmentArray['tshirt']["price"][] = "5.70";
 $garmentArray['tshirt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=BB401&n=Poly-Cotton%3Cbr%3EShort%20Sleeve%20Crew%20Neck";
-$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["accImm"][] = "assets/img/calculator-templates/t-shirt.gif";
 $garmentArray['tshirt']["info"][] = array("id"=>4 ,"garName"=>"American App. TR401 Tri-Blend");
 $garmentArray['tshirt']["price"][] = "7.00";
 $garmentArray['tshirt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=TR401&n=Tri-Blend%3Cbr%3EShort%20Sleeve%20Track%20Shirt";
-$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["accImm"][] = "assets/img/calculator-templates/builder/tshirt-heather.png";
 $garmentArray['tshirt']["info"][] = array("id"=>5 ,"garName"=>"Tul-tex 100% Cotton");
 $garmentArray['tshirt']["price"][] = "3.10";
 $garmentArray['tshirt']["link"][] = "";
-$garmentArray['tshirt']["accImm"][] = 0;
+$garmentArray['tshirt']["accImm"][] = "assets/img/calculator-templates/t-shirt.gif";
 
 $garmentArray['vneckt']["info"][] = array("id"=>0 ,"garName"=>"American App. 2456");
 $garmentArray['vneckt']["price"][] = "5.95";
 $garmentArray['vneckt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=2456&n=Fine%20Jersey%3Cbr%3EShort%20Sleeve%20V-Neck";
-$garmentArray['vneckt']["accImm"][] = 1;
+$garmentArray['vneckt']["accImm"][] = "assets/img/calculator-templates/vneckt.gif";
 $garmentArray['vneckt']["info"][] = array("id"=>1 ,"garName"=>"American App. Deep V 6456");
 $garmentArray['vneckt']["price"][] = "7.15";
 $garmentArray['vneckt']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=6456&n=Sheer%20Jersey%20Short%20Sleeve%20Deep%20V-Neck";
-$garmentArray['vneckt']["accImm"][] = 1;
+$garmentArray['vneckt']["accImm"][] = "assets/img/calculator-templates/vneckt.gif";
 
 $garmentArray['ziphoodie']["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 8oz 50/50");
 $garmentArray['ziphoodie']["price"][] = "15.15";
 $garmentArray['ziphoodie']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=996&h=hosted&noCache=5020111308440812361";
-$garmentArray['ziphoodie']["accImm"][] = 2;
+$garmentArray['ziphoodie']["accImm"][] = "assets/img/calculator-templates/ziphoodie.gif";
 $garmentArray['ziphoodie']["info"][] = array("id"=>1 ,"garName"=>"Fruit/Gildan/Jerzees 9.5oz 50/50");
 $garmentArray['ziphoodie']["price"][] = "20.15";
 $garmentArray['ziphoodie']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4999&h=hosted&noCache=5020111308440799724";
-$garmentArray['ziphoodie']["accImm"][] = 2;
+$garmentArray['ziphoodie']["accImm"][] = "assets/img/calculator-templates/ziphoodie.gif";
 $garmentArray['ziphoodie']["info"][] = array("id"=>2 ,"garName"=>"American App. 5497");
 $garmentArray['ziphoodie']["price"][] = "21.55";
 $garmentArray['ziphoodie']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=5497&n=California%20Fleece%3Cbr%3EZip%20Hoody";
-$garmentArray['ziphoodie']["accImm"][] = 2;
+$garmentArray['ziphoodie']["accImm"][] = "assets/img/calculator-templates/ziphoodie.gif";
 $garmentArray['ziphoodie']["info"][] = array("id"=>3 ,"garName"=>"American App. FlexFleece F497");
 $garmentArray['ziphoodie']["price"][] = "20.50";
 $garmentArray['ziphoodie']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=F497&n=Flex%20Fleece%3Cbr%3EZip%20Hoody";
-$garmentArray['ziphoodie']["accImm"][] = 2;
+$garmentArray['ziphoodie']["accImm"][] = "assets/img/calculator-templates/ziphoodie.gif";
 
 $garmentArray['pulloverhoodie']["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 8oz 50/50 Cotton");
 $garmentArray['pulloverhoodie']["price"][] = "11.05";
 $garmentArray['pulloverhoodie']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=16130&h=hosted&noCache=5020111308440399268";
-$garmentArray['pulloverhoodie']["accImm"][] = 3;
+$garmentArray['pulloverhoodie']["accImm"][] = "assets/img/calculator-templates/pulloverhoodie.gif";
 $garmentArray['pulloverhoodie']["info"][] = array("id"=>1 ,"garName"=>"Fruit/Gildan/Jerzees 9.5oz 50/50 Cotton");
 $garmentArray['pulloverhoodie']["price"][] = "13.60";
 $garmentArray['pulloverhoodie']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4997&h=hosted&noCache=5020111308440432619";
-$garmentArray['pulloverhoodie']["accImm"][] = 3;
+$garmentArray['pulloverhoodie']["accImm"][] = "assets/img/calculator-templates/pulloverhoodie.gif";
 $garmentArray['pulloverhoodie']["info"][] = array("id"=>2 ,"garName"=>"American App. 5495");
 $garmentArray['pulloverhoodie']["price"][] = "17.60";
 $garmentArray['pulloverhoodie']["link"][] = "http://www.americanapparel.net/morephotos/viewer.asp?style=5495&n=California%20Fleece%3Cbr%3EPullover%20Hoody";
-$garmentArray['pulloverhoodie']["accImm"][] = 3;
+$garmentArray['pulloverhoodie']["accImm"][] = "assets/img/calculator-templates/pulloverhoodie.gif";
 
 $garmentArray['longsleeve']["info"][] = array("id"=>0 ,"garName"=>"Fruit/Gildan/Jerzees 100% or 50/50 Cotton");
 $garmentArray['longsleeve']["price"][] = "4.55";
 $garmentArray['longsleeve']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=4930&h=hosted&noCache=5020111308440479949";
-$garmentArray['longsleeve']["accImm"][] = 4;
+$garmentArray['longsleeve']["accImm"][] = "assets/img/calculator-templates/longsleeve.gif";
 
 $garmentArray['polo']["info"][] = array("id"=>0 ,"garName"=>"Generic Golf/Sport 100% or 50/50 Cotton");
 $garmentArray['polo']["price"][] = "6.15";
 $garmentArray['polo']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=437&h=hosted&noCache=5020111308440577529";
-$garmentArray['polo']["accImm"][] = 5;
+$garmentArray['polo']["accImm"][] = "assets/img/calculator-templates/golf.gif";
 $garmentArray['polo']["info"][] = array("id"=>1 ,"garName"=>"Generic Golf/Sport 100% or 50/50 Cotton W/Pocket");
 $garmentArray['polo']["price"][] = "7.55";
 $garmentArray['polo']["link"][] = "http://www.catalogsportswear.com/cgi-bin/hw/webshr/colorChart.w?sc=436P&h=hosted&noCache=5020111308440564260";
-$garmentArray['polo']["accImm"][] = 5;
+$garmentArray['polo']["accImm"][] = "assets/img/calculator-templates/golf.gif";
 
 $garmentArray['custsupplied']["info"][] = array("id"=>0 ,"garName"=>"Customer Supplied");
 $garmentArray['custsupplied']["price"][] = "0.50";
 $garmentArray['custsupplied']["link"][] = "";
-$garmentArray['custsupplied']["accImm"][] = 6;
+$garmentArray['custsupplied']["accImm"][] = "assets/img/calculator-templates/cust-supplied.gif";
 
 $garmentArray['custom']["info"][] = array("id"=>0 ,"garName"=>"Enter Custom Item Cost Below.");
 $garmentArray['custom']["price"][] = "0";
 $garmentArray['custom']["link"][] = "";
-$garmentArray['custom']["accImm"][] = 6;
+$garmentArray['custom']["accImm"][] = "assets/img/calculator-templates/custom.gif";
 
 
 $locCost = 0.10;
@@ -431,7 +430,6 @@ function formatMoney($val,$sign = "$"){
 
 function doGarmentCalc($d,$c,$priceArray,$garmentArray){
   $returned = array();
-  $accompanyImages = array("images/t-shirt.gif","images/vneckt.gif","images/ziphoodie.gif","images/pulloverhoodie.gif","images/longsleeve.gif","images/golf.gif","images/cust-supplied.gif");
   
   $fc = $d['printColors_front'] * $priceArray[0]["perColor"][$d['qtyVar']];
   $bc = $d['printColors_back'] * $priceArray[0]["perColor"][$d['qtyVar']];
@@ -483,14 +481,15 @@ function doGarmentCalc($d,$c,$priceArray,$garmentArray){
   $returned['taxTotal'] = $taxTotal;
   $returned['quoteTotal'] = $quoteTotal;
   $returned['taxTotalFormatted'] = formatMoney(number_format($taxTotal, 2, '.', ''));
-  $returned['itemPriceFormatted'] = formatMoney($printPrice);
+  $returned['itemPriceFormatted'] = formatMoney(number_format($printPrice, 2, '.', ''));
   $returned['piecePriceFormatted'] = formatMoney(number_format($piecePrice, 2, '.', ''));
   $returned['quoteTotalFormatted'] = formatMoney(number_format($quoteTotal, 2, '.', ''));
   $returned['itemName'] = $garmentArray[$d['garmentType']]["info"][$c]['garName'];
-  $returned['itemPhoto'] = $accompanyImages[$garmentArray[$d['garmentType']]["accImm"][0]];
+  $returned['itemPhoto'] = $garmentArray[$d['garmentType']]["accImm"][$c];
+
 
     if($garmentArray[$d['garmentType']]["link"][0] != ""){
-      $returned['itemLink'] = $garmentArray[$d['garmentType']]["link"][0];
+      $returned['itemLink'] = $garmentArray[$d['garmentType']]["link"][$c];
     }
 
   if(is_numeric($d['discCode'])){

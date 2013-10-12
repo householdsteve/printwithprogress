@@ -120,6 +120,8 @@ jQuery(function ($) {
         "colors-other" : Handlebars.compile($('#garment-template').html()),
       }
       this.itemTemplate = Handlebars.compile($('#item-template').html());
+      this.savingsTemplate = Handlebars.compile($('#savings-template').html());
+      this.$savings = $('#savings');
 			this.$panelOne = this.$calcInstance.find('#collapseOne');
 			this.$panelTwo = this.$calcInstance.find('#collapseTwo');
 			this.$panelThree = this.$calcInstance.find('#collapseThree');		
@@ -161,11 +163,11 @@ jQuery(function ($) {
 		},
 		render: function () {
        
-      // this.$garmentOptions.find('input').iCheck({
-      //           checkboxClass: 'icheckbox_square-red',
-      //           radioClass: 'iradio_square-red',
-      //           increaseArea: '20%' // optional
-      //         });
+       this.$panelTwo.find('input').iCheck({
+                 checkboxClass: 'icheckbox_square-blue',
+                 radioClass: 'iradio_square-blue',
+                 increaseArea: '20%' // optional
+               });
 		},
 		processForm: function(form){
 		  $.ajax({
@@ -179,9 +181,14 @@ jQuery(function ($) {
     		  });
 		},
 		refreshTables: function(data){
-		  console.log(data);
+		  console.log(data.items[0].upsell);
 		  App.$panelThree.prev().trigger('click');
-		  App.$tableResults.html(App.itemTemplate(data));
+		  App.$tableResults.empty().html(App.itemTemplate(data));
+		  
+		  if(data.items[0].upsell){
+        App.$savings.hide().html(App.savingsTemplate(data.items[0].upsell)).delay(2000).fadeIn(400);
+      }
+      $('.catalog').magnificPopup({type:'iframe'});   
 		},
 		togglePanel: function(e){
 		  e.stopImmediatePropagation();
