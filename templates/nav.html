@@ -1,0 +1,5 @@
+<ul class="nav navbar-nav text-uppercase">
+ {% for key,nav in pagevars.nav %}
+   <li class="{{ key in pagevars.args ? 'active' : '' }}"><a href="{{ pagevars.baseurl }}/{{ key }}">{{ nav['title'] }}</a></l1>
+ {% endfor %}
+</ul>

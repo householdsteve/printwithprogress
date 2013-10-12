@@ -1,0 +1,29 @@
+{
+    "apparel": {
+        "title":"Apparel",
+        "description":"Apparel Desc",
+        "keywords":"test, test",
+        "og": {
+          "image":"qqq",
+          "title":"www"
+        }
+    },
+    "flatstock": {
+        "title":"Flatstock",
+        "description":"FS DEc",
+        "keywords":"flat",
+        "og": {
+          "image":"eee",
+          "title":"rrr"
+        }
+    },
+    "contact": {
+        "title":"Contact",
+        "description":"56",
+        "keywords":"10",
+        "og": {
+          "image":"ttt",
+          "title":"yyy"
+        }
+    }
+}

@@ -1,0 +1,271 @@
+{% include 'header.html' %}
+
+    <h1 class="white">APPAREL QUOTE CALCULATOR</h1>
+ 	  <div class="well">          
+      <form id="calculator" class="row" action="calculate.php" method="post" accept-charset="utf-8">
+
+        <div class="col-md-6">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading open">
+                <h4 class="panel-title">
+                  <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                    1. Select Garment
+                  </span>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <div class="row">
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
+                      <figcaption><input type="radio" name="garmentType" value="tshirt"><span>T-Shirts</span></figcaption>
+                    </figure>
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/t-shirt.gif" width="133" height="120" alt="T Shirt">
+                      <figcaption><input type="radio" name="garmentType" value="pockettshirt"><span>Pocket Tees</span></figcaption>
+                    </figure>
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/vneckt.gif" width="133" height="120" alt="Vneckt">
+                      <figcaption><input type="radio" name="garmentType" value="vneckt"><span>V Necks</span></figcaption>
+                    </figure>
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
+                      <figcaption><input type="radio" name="garmentType" value="longsleeve"><span>Long Sleeves</span></figcaption>
+                    </figure>
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/longsleeve.gif" width="120" height="120" alt="Longsleeve">
+                      <figcaption><input type="radio" name="garmentType" value="pocketlongsleeve"><span>Pocket Long Sleeves</span></figcaption>
+                    </figure>
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/golf.gif" width="120" height="120" alt="Golf">
+                      <figcaption><input type="radio" name="garmentType" value="polo"><span>Polos</span></figcaption>
+                    </figure>
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/ziphoodie.gif" width="90" height="120" alt="Ziphoodie">
+                      <figcaption><input type="radio" name="garmentType" value="ziphoodie"><span>Zip Hoodies</span></figcaption>
+                    </figure>
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/pulloverhoodie.gif" width="90" height="120" alt="Pulloverhoodie">
+                      <figcaption><input type="radio" name="garmentType" value="pulloverhoodie"><span>Pullover Hoodies</span></figcaption>
+                    </figure>
+                    
+                    <figure class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="img-responsive" src="assets/img/calculator-templates/cust-supplied.gif" width="120" height="120" alt="Cust Supplied">
+                      <figcaption><input type="radio" name="garmentType" value="custsupplied"><span>Customer Supplied Items</span></figcaption>
+                    </figure>
+                  
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                    2. Specify quantity and colors
+                  </span>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="row">  
+                      <div class="form-group">
+                          <label for="qty" class="col-md-7 control-label">How many do you need?</label>
+                          <div class="col-md-5">
+                            <input type="text" class="form-control" id="qty" name="qty" value="100"  pattern="\d*" required>
+                          </div>
+                      </div>
+                    </div>  
+                  <div class="row">
+                    <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-front">Colors on Front</label>
+                    <div class="input-group col-md-3 col-sm-4 pull-right">
+                      <span class="input-group-addon">-</span>
+                      <input type="number" class="form-control" name="colors-front" value="0" min="0" max="6">
+                      <span class="input-group-addon">+</span>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-back">Colors on Back</label>
+                    <div class="input-group col-md-3 col-sm-4 pull-right">
+                      <span class="input-group-addon">-</span>
+                      <input type="number" class="form-control" name="colors-back" value="0" min="0" max="6">
+                      <span class="input-group-addon">+</span>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-left">Colors on Left Sleeve</label>
+                    <div class="input-group col-md-3 col-sm-4 pull-right">
+                      <span class="input-group-addon">-</span>
+                      <input type="number" class="form-control" name="colors-left" value="0" min="0" max="6">
+                      <span class="input-group-addon">+</span>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-right">Colors on Right Sleeve</label>
+                    <div class="input-group col-md-3 col-sm-4 pull-right">
+                      <span class="input-group-addon">-</span>
+                      <input type="number" class="form-control" name="colors-right" value="0" min="0" max="6">
+                      <span class="input-group-addon">+</span>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <label class="quantity-label col-md-7 col-sm-6 control-label" for="colors-other">Colors on Other Location</label>
+                    <div class="input-group col-md-3 col-sm-4 pull-right">
+                      <span class="input-group-addon">-</span>
+                      <input type="number" class="form-control" name="colors-other" value="0" min="0" max="6">
+                      <span class="input-group-addon">+</span>
+                    </div>
+                  </div>
+                  
+                  <div class="row">  
+                    <div class="form-group">
+                        <label for="qty" class="col-md-7 col-sm-6 control-label">I use a tax ID for my orders</label>
+                        <div class="col-md-3 col-sm-4 pull-right">
+                          <input type="checkbox" name="taxdeduct" id="taxdeduct">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Give me my prices!">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                    3. Review price quote
+                  </span>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div id="savings"></div>
+                  <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                   <thead>
+                    <tr><th class="thumb"><span>&nbsp;</span></th><th class="l"><span>Item</span></th><th>Piece Price</th><th>Total</th></tr>
+                   </thead>
+                   <tbody id="apiResults">
+                    <tr class="alert alert-danger"><td colspan="4">You have not specified print details. Please follow steps 1 &amp; 2.</td></tr>
+                   </tbody>
+                  </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>We'll keep track of your quote below</h2>
+          <div class="" id="builder-well">
+            <div class="container">
+              <img class="faded" src="assets/img/ink-bucket.png" width="120" alt="Ink Bucket">
+            </div>
+          </div>
+        </div>
+      </form>
+ 	  </div>
+ 	  
+    <h1 class="white">DOWNLOADABLE SHIRT TEMPLATES</h1>
+  	<div class="well">
+  	  <div class="row">
+  	    <div class="col-md-4">
+  	      <h3><img src="assets/img/shirt-templates/thumbs/thumb_tshirt.png"></h3>
+	<p class="TITLES">
+		T-SHIRT</p>
+</div>
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_pocket-tshirt.png"></h3>
+	<p class="TITLES">
+		POCKET TEE</p>
+</div>
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_tshirt-heather.png"></h3>
+	<p class="TITLES">
+		HEATHER TEE</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_vneck-tshirt.png"></h3>
+	<p class="TITLES">
+		V-NECK TEE</p>
+</div>
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_vneck-deep-tshirt.png"></h3>
+	<p class="TITLES">
+		DEEP-V TEE</p>
+</div>
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_polo.png"></h3>
+	<p class="TITLES">
+		POLO</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_tank.png"></h3>
+	<p class="TITLES">
+		TANK</p>
+</div>
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_tshirt-longsleeve.png"></h3>
+	<p class="TITLES">
+		LONG SLEEVE</p>
+</div>
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_pocket-tshirt-longsleeve.png"></h3>
+	<p class="TITLES">
+		POCKET LONG SLEEVE</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_sleeves-shortsleeve.png"></h3>
+	<p class="TITLES">SHORT SLEEVES</p>
+</div>
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_sleeves-longsleeve.png"></h3>
+	<p class="TITLES">LONG SLEEVES</p>
+</div>
+  <div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_sleeves-hoodie.png"></h3>
+	<p class="TITLES">
+		HOODIE SLEEVES</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_hoodie-zip.png"></h3>
+	<p class="TITLES">
+		ZIP HOODIE</p>
+</div>
+<div class="col-md-4">
+	<h3><img src="assets/img/shirt-templates/thumbs/thumb_hoodie-pullover.png"></h3>
+	<p class="TITLES">PULLOVER HOODIE</p>
+</div>
+  	</div>
+</div>
+    
+{% include 'footer.html' %}

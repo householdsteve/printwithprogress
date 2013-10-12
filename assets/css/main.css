@@ -5,6 +5,10 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+.text-uppercase {
+  text-transform:uppercase;
+}
+
 .input-group-addon, #calculator .panel-heading  {
   cursor:pointer;
 }
@@ -107,3 +111,46 @@ input::-webkit-inner-spin-button {
   margin-top:15px;
   margin-left:-35px;
 }
+
+  body {
+    padding-top: 60px; /* 60px to make the container go all the way
+    to the bottom of the topbar */
+    background: url("../img/background_photo_1400px_1.jpg") top center fixed;
+  }
+  
+ .white {
+    color: #FFFFFF;
+  }
+  footer a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  footer a:visited {
+    text-decoration: none;
+    color: #CCCCCC;
+  }
+  footer a:hover {
+    text-decoration: underline;
+    color: #FF0000;
+  }
+  footer a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  
+  figure {
+    cursor:pointer;
+  }
+  
+  .navbar-inverse {
+    background-color: #1B1B1B;
+    background-image: linear-gradient(to bottom, #222222, #111111);
+    background-repeat: repeat-x;
+    border-color: #252525;
+  }
+  
+   @media (min-width: 980px) {
+      body {
+        margin-top: 41px;
+      }
+    }

@@ -1,0 +1,49 @@
+    	<footer class="white">
+    		<p>248-982-4247<br>
+    		  <a href="mailto:info@printwithprogress.com">info@printwithprogress.com</a><br>
+   		      <a href="https://plus.google.com/100000049123748979614/about" target="new">364 Hilton Road, Ferndale,	Mich	48220</a><br>
+	      © Progress Custom Screen Printing 2013 </p>
+</footer>
+
+{% raw %}
+  <script id="item-template" type="text/x-handlebars-template">
+  {{#each items}}
+  <tr data-id="{{id}}"><td class="thumb {{thumbclass}}"><img width="70" class="img-responsive" src="{{itemPhoto}}"></td><td class="l"><a href="{{itemLink}}" class="catalog"><span>{{itemName}}</span></a></td><td>{{piecePriceFormatted}}</td><td>{{quoteTotalFormatted}}</td></tr>
+  {{/each}}
+  </script>
+  
+  <script id="garment-template" type="text/x-handlebars-template">
+    <div id="{{contentId}}" class="template col-md-6{{contentClass}}">
+      <img src="{{imgSrc}}">
+      <div class="counter-overlay">{{counter}}</div>
+      <footer>{{description}}</footer>
+    </div>
+  </script>
+  
+  <script id="savings-template" type="text/x-handlebars-template">
+    <div class="alert alert-success">Save a total of <strong>{{totalSavingsFormatted}}</strong> if your order another <strong>{{remainingToUpsell}}</strong> pieces</div>
+  </script>
+{% endraw %}  
+
+</div>
+  <!-- /container ends here from header.html -->
+
+        <script type="text/javascript" charset="utf-8">
+        	AApp = {"basePath": "{{pagevars.baseurl}}"};
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="{{ pagevars.baseurl }}/assets/js/bootstrap.min.js"></script>
+        <script src="{{ pagevars.baseurl }}/assets/js/jquery.icheck.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="{{ pagevars.baseurl }}/assets/js/handlebars/handlebars.js" type="text/javascript" charset="utf-8"></script>
+        <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="{{ pagevars.baseurl }}/assets/js/mp.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="{{ pagevars.baseurl }}/assets/js/calculator/app.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script>
+            var _gaq=[['_setAccount','{{ pagevars.googleanalytics }}'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
