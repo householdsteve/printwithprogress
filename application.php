@@ -12,8 +12,6 @@ require __DIR__ .'/resources/base.php';
 function process_page_call($URLPARTS){
     $is_page_secure = find_secure_connection();
     
-
-
 // LOAD TWIG SETTINGS - THIS IS FOR TEMLATEING
     Twig_Autoloader::register();
     $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
@@ -48,7 +46,7 @@ function process_page_call($URLPARTS){
           "baseurl"=> $baseurl, // THE BASE URL OF THE SITE
           "secure" => $is_page_secure,
           "nav" => $sitemap, // send an object here
-          "args" => $URLARGS, // SEND ALL OF THE ARGUMENTS TO USE USED IN THE PAGE
+          "args" => $URLPARTS, // SEND ALL OF THE ARGUMENTS TO USE USED IN THE PAGE
           "titlebase" => "Progress Custom Screen Printing - ", // THE FIRST PART OF THE PAGE TITLE
           "title"=>"Welcome", // THE SECOND PART OF PAGE TITLE. THIS SHOULD BE EXTENDED BELOW BASED ON CONTENT
           "description" => "XXXXX", // THIS IS FOR META TAGS
@@ -57,7 +55,7 @@ function process_page_call($URLPARTS){
                         "title"=> "The Title that shows up on facebook") // THESE ARE FOR SOCIAL CHANNELS LIKE FACEBOOK WHERE AN IMAGE IS SHARED.
      );
      
-     //echo "<pre>".print_r($sitemap)."</pre>";
+     //echo "<pre>".print_r($URLPARTS)."</pre>";
 
 // THIS PROCESSES THE FIRST PART OF THE URL TO DELEGATE ACTIONS
     if(count($sitemap[$URLPARTS[0]]) > 0 && !isset($sitemap[$URLPARTS[0]]["manual"])){

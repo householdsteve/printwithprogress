@@ -181,7 +181,6 @@ jQuery(function ($) {
     		  });
 		},
 		refreshTables: function(data){
-		  console.log(data.items[0].upsell);
 		  App.$panelThree.prev().trigger('click');
 		  App.$tableResults.empty().html(App.itemTemplate(data));
 		  

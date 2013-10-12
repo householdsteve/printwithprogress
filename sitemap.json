@@ -2,11 +2,7 @@
     "apparel": {
         "title":"Apparel",
         "description":"Apparel Desc",
-        "keywords":"test, test",
-        "og": {
-          "image":"qqq",
-          "title":"www"
-        }
+        "keywords":"test, test"
     },
     "flatstock": {
         "title":"Flatstock",
