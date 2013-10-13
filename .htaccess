@@ -3,7 +3,7 @@ SetEnv APPCACHE false
 
 RewriteEngine on
 #RewriteBase /Library/WebServer/Documents/2013/printwithprogress/
-#RewriteBase /
+RewriteBase /
 RewriteCond %{REQUEST_URI} ^/cache/images/
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
 RewriteRule (.*) /generate.php?$1 [L]
